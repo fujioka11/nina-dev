@@ -1,0 +1,31 @@
+export
+wp --path=/var/www/wordpress db export /vagrant/import.sql
+
+import
+wp --path=/var/www/wordpress db import /vagrant/import.sql
+
+
+wp search-replace 'weave.com' 'media-weave.link'
+
+cd /vagrant
+which mysqldump
+
+wordmove push --all
+
+wordmove push -e staging -w
+wordmove push -e staging --all
+wordmove push -e staging -p
+wordmove push -e staging -t
+wordmove push -e staging -d
+wordmove push -e staging -u
+
+ssh testaaa@testaaa.sakura.ne.jp
+
+データベース
+testaaa_fujioka
+19831101Fu
+
+knrrt7tz39
+
+
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC8FMUJ/JDH2cdmCPv7Rqqk8jfpeZjTkKcsm1tWcTHI/s4czGYuj+ZoF8pG60IFOTCBxR6POIscyDvVw1WXRki1TZGlQpDcE5gJLBb1PbJu/DtjuoGnLpf0drfQHuuelujqYXzM/V3TIPzTnYDnY6eMuG7+nE4eFXVvQ1RoSw9wT/MtynqY0669z5Df9a52SODS2vt4yFAx4nHqX2lS0RBbpSX5pnZPqeq/ZYh2pxC1ymNvjvhWazwYo7+tiDgAegpubG7OufXEqZwRJ8gniAtzS/eOeNgyvgEYZJjbC9up3/XotmZenx8Ystj+7hujAf2c8oRUSg9ykMpovXXuE+Zr fujiokahiroshi@fujiokahirofumi-no-MacBook-Air.local
