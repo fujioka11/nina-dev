@@ -88,10 +88,11 @@
 
 
     <p class="request">
-      <a class="clip-btn" href="#">仕事のご依頼
+      <a class="clip-btn" href="#">お仕事のご依頼
         <svg role="image" class="icon">
-          <use xlink:href="svg/icons.svg#request" />
+          <use xlink:href="<?php echo esc_url( get_template_directory_uri() ); ?>/svg/icons.svg#request" />
         </svg>
       </a>
     </p>
+
 </nav>
