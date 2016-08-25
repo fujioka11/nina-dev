@@ -1,59 +1,33 @@
+---
 local:
-  vhost: "http://nina.dev"
-  wordpress_path: "/var/www/wordpress"
-
   database:
-    name: "wordpress"
-    user: "wordpress"
-    password: "wordpress"
-    host: "localhost"
-
+    host: "192.168.11.11"
+    name: wordpress
+    password: wordpress
+    user: wordpress
+  vhost: nina.dev
+  wordpress_path: /var/www/wordpress/
 staging:
-  vhost: "http://example.com"
-  wordpress_path: "/var/www/your_site" # use an absolute path here
-
   database:
-    name: "database_name"
-    user: "user"
-    password: "password"
-    host: "localhost"
-    charset: "utf8"
-
+    charset: utf8
+    host: mysql433.db.sakura.ne.jp
+    name: testaaa_fujioka
+    password: 19831101Fu
+    user: testaaa
   exclude:
-    - ".git/"
-    - ".gitignore"
-    - ".sass-cache/"
-    - "bin/"
-    - "tmp/*"
-    - "Gemfile*"
-    - "Movefile"
-    - "wp-config.php"
-    - "wp-content/*.sql"
-
-  # paths: # you can customize wordpress internal paths
-  #   wp_content: "wp-content"
-  #   uploads: "wp-content/uploads"
-  #   plugins: "wp-content/plugins"
-  #   themes: "wp-content/themes"
-  #   languages: "wp-content/languages"
-  #   themes: "wp-content/themes"
-
-  # ssh:
-  #   host: "host"
-  #   user: "user"
-  #   password: "password" # password is optional, will use public keys if available.
-  #   port: 22 # Port is optional
-  #   rsync_options: "--verbose" # Additional rsync options, optional
-  #   gateway: # Gateway is optional
-  #     host: "host"
-  #     user: "user"
-  #     password: "password" # password is optional, will use public keys if available.
-
-  # ftp:
-  #   user: "user"
-  #   password: "password"
-  #   host: "host"
-  #   passive: true
-
-# production: # multiple environments can be specified
-#   [...]
+    - .git/
+    - .gitignore
+    - .sass-cache/
+    - bin/
+    - tmp/*
+    - Gemfile*
+    - Movefile
+    - wp-config.php
+    - wp-content/*.sql
+    - .DS_Store
+  ssh:
+    host: testaaa.sakura.ne.jp
+    password: knrrt7tz39
+    user: testaaa
+  vhost: nina-archetype.com
+  wordpress_path: /home/testaaa/www/nina/

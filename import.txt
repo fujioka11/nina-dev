@@ -5,7 +5,7 @@ import
 wp --path=/var/www/wordpress db import /vagrant/import.sql
 
 
-wp search-replace 'weave.com' 'media-weave.link'
+wp search-replace ‘nina.dev’ ‘nina-archetype.com’
 
 cd /vagrant
 which mysqldump
@@ -13,8 +13,9 @@ which mysqldump
 wordmove push --all
 
 wordmove push -e staging -w
-wordmove push -e staging --all
+	
 wordmove push -e staging -p
+wordmove push -e staging --all
 wordmove push -e staging -t
 wordmove push -e staging -d
 wordmove push -e staging -u

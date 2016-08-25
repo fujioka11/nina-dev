@@ -4,6 +4,7 @@
 /*リンクカラー*/
 /*ボタン*/
 /*ボーダー*/
+/*アンダーリンク*/
 /*アイコン*/
 /*マージン*/
 /*スマホ*/
@@ -77,7 +78,7 @@ body {
   padding: 0;
   font-size: 14px;
   line-height: 1.8em;
-  font-family: "lato", "ヒラギノ角ゴシック Pro", "Hiragino Kaku Gothic Pro", メイリオ, Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif !important;
+  font-family: "Lato","游ゴシック体", "Yu Gothic", YuGothic, "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo", sans-serif;
   color: #444;
   height: 100%;
   background: #fff; }
@@ -92,29 +93,33 @@ a {
 @media print, screen and (min-width: 1080px) {
   p {
     color: #5B5B5B;
-    font-size: 14px;
-    font-size: 1.4rem;
-    line-height: 2.28571; } }
+    font-size: 15px;
+    font-size: 1.5rem;
+    line-height: 2.2; } }
 @media print, screen and (min-width: 640px) and (max-width: 1079px) {
   p {
     color: #000;
-    font-size: 14px;
-    font-size: 1.4rem;
-    line-height: 1.85714; } }
+    font-size: 16px;
+    font-size: 1.6rem;
+    line-height: 1.875; } }
 @media print, screen and (max-width: 639px) {
   p {
     color: #000;
-    font-size: 14px;
-    font-size: 1.4rem;
-    line-height: 1.14286; } }
+    font-size: 13px;
+    font-size: 1.3rem;
+    line-height: 1.84615; } }
 
 .wrap {
   width: 100%;
   position: relative;
-  background: #fff; }
+  background: #fff;
+  border-top: 5px solid #1BCDD9; }
   @media print, screen and (min-width: 640px) and (max-width: 1079px) {
     .wrap {
       min-width: 640px; } }
+  @media print, screen and (max-width: 639px) {
+    .wrap {
+      background: #f2f2f2; } }
 
 header {
   text-align: right;
@@ -144,10 +149,9 @@ header {
     min-height: 280px;
     position: fixed;
     left: 2.77%;
-    top: 60px;
+    top: 160px;
     width: 160px;
-    z-index: 1;
-    padding: 40px 0px; } }
+    z-index: 1; } }
 @media print, screen and (min-width: 640px) and (max-width: 1079px) {
   nav {
     width: 100%;
@@ -160,6 +164,7 @@ header {
   nav {
     width: 100%;
     height: 70px;
+    background: #fff;
     margin-right: auto;
     margin-left: auto;
     padding-top: 20px;
@@ -185,6 +190,26 @@ nav .logo {
 nav a {
   color: #444; }
 
+.sns-box {
+  margin: 40px 0 0 -10px; }
+  @media print, screen and (min-width: 640px) and (max-width: 1079px) {
+    .sns-box {
+      display: none; } }
+  @media print, screen and (max-width: 639px) {
+    .sns-box {
+      display: none; } }
+  .sns-box li {
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    margin-left: 10px; }
+    .sns-box li .foot-icon {
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      fill: #ccc; }
+
 @media print, screen and (max-width: 639px) {
   .request {
     display: none; } }
@@ -197,12 +222,16 @@ nav a {
     right: 20px; }
     .request a {
       display: block;
-      background: #f2f2f2;
+      background: #1BCDD9;
       padding: 2px;
       color: #fff;
       font-weight: bold;
       padding: 6px 0;
-      box-shadow: 0px 1px 2px 0px rgba(106, 106, 106, 0.5); }
+      box-shadow: 0px 1px 1px 0px rgba(106, 106, 106, 0.5); } }
+    @media print, screen and (min-width: 640px) and (max-width: 1079px) and (min-width: 640px) and (max-width: 1079px) {
+      .request a {
+        background: #39DAB6; } }
+@media print, screen and (min-width: 640px) and (max-width: 1079px) {
       .request a .icon {
         display: none; } }
 @media print, screen and (min-width: 1080px) {
@@ -212,16 +241,17 @@ nav a {
     font-size: 13px;
     font-size: 1.3rem;
     line-height: 1.84615;
-    margin-left: -5px; }
+    margin-left: -5px;
+    margin-top: 20px; }
     .request a {
       display: block;
-      background: #f2f2f2;
+      background: #1BCDD9;
       padding: 6px 0 6px 13px;
-      color: #5B5B5B; }
+      color: #fff; }
       .request a .icon {
         width: 10px;
         height: 10px;
-        fill: #5B5B5B;
+        fill: #fff;
         position: absolute;
         right: 10px;
         top: 13px; }
@@ -239,7 +269,7 @@ nav a {
     margin-right: 2.77778%;
     /*height: 0px;*/ } }
 .main a {
-  text-decoration: underline; }
+  text-decoration: none; }
   .main a:hover {
     text-decoration: none; }
 
@@ -247,52 +277,51 @@ nav a {
   background: #E9E9E9;
   width: 100%; }
 
-.close_area {
-  margin-top: 60px;
-  background: #fff; }
-  .close_area footer {
-    width: 94.45%;
-    margin-right: auto;
-    margin-left: auto;
-    text-align: left;
-    height: 110px;
-    position: relative; }
-  .close_area .footer-box {
+footer {
+  width: 94.45%;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 50px;
+  height: 90px;
+  position: relative; }
+  @media print, screen and (min-width: 640px) and (max-width: 1079px) {
+    footer {
+      height: 60px; } }
+  @media print, screen and (max-width: 639px) {
+    footer {
+      height: 60px;
+      margin-top: 20px; } }
+  footer .pagetop {
+    width: 50px;
+    height: 50px;
     position: absolute;
-    top: 30px;
-    left: 0; }
-    .close_area .footer-box li {
-      margin-right: 1em;
-      display: inline-block; }
-      .close_area .footer-box li a {
-        display: inline-block; }
-        .close_area .footer-box li a .foot-icon {
-          margin: 0;
-          padding: 0;
-          width: 20px;
-          height: 20px;
-          fill: #B1B1B1; }
-        .close_area .footer-box li a .foot-icon img {
-          margin: 0;
-          padding: 0;
-          width: 100%; }
-        .close_area .footer-box li a:hover .foot-icon {
-          fill: #39DAB6; }
-  .close_area .contact {
+    right: 0; }
+    @media print, screen and (max-width: 639px) {
+      footer .pagetop {
+        top: -13px; } }
+    footer .pagetop a .top-icon {
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      fill: #5B5B5B; }
+    footer .pagetop a:hover .top-icon {
+      fill: #1BCDD9; }
+  footer .copyright {
+    display: inline;
     position: absolute;
-    right: 0;
-    top: 0px;
-    width: 323px; }
-    .close_area .contact a {
-      display: block;
-      background: #1BCDD9;
-      color: #fff;
-      padding: 13px 0;
-      text-align: center;
-      box-shadow: 0px 1px 2px 0px rgba(129, 129, 129, 0.5); }
-      .close_area .contact a:hover {
-        background: #39DAB6;
-        color: #fff; }
+    left: 0;
+    top: 10px;
+    font-size: 11px;
+    font-size: 11px;
+    font-size: 1.1rem;
+    line-height: 2.18182; }
+    @media print, screen and (max-width: 639px) {
+      footer .copyright {
+        font-size: 10px;
+        font-size: 1rem;
+        line-height: 2.4;
+        top: 4px; } }
 
 @media print, screen and (min-width: 1080px) {
   .main-navi {
@@ -343,6 +372,8 @@ nav a {
         text-align: center; } }
     .main-navi li a:hover {
       color: #1BCDD9; }
+  .main-navi li .active {
+    color: #1BCDD9; }
 
 @media print, screen and (min-width: 1080px) {
   .nav-toggle {
@@ -399,14 +430,37 @@ nav a {
 .mt15 {
   margin-top: 15px; }
 
+@media print, screen and (min-width: 640px) and (max-width: 1079px) {
+  .tb_mt10 {
+    margin-top: 20px; } }
+
+.sp_mt10 {
+  margin-top: 10px; }
+
+@media print, screen and (min-width: 640px) and (max-width: 1079px) {
+  .tb_none {
+    display: none; } }
+@media print, screen and (max-width: 639px) {
+  .tb_none {
+    display: none; } }
+
 /*$h: (194/1235)*10000%)/100;*/
 /*chachテキストの高さ*/
+@media print, screen and (max-width: 639px) {
+  .sp-contents {
+    background: #fff;
+    padding: 15px 0 20px;
+    margin-bottom: 10px; } }
+
 .top_inner {
   margin: 0 auto;
   width: 100%;
   text-align: left;
   background: #fff;
   position: relative; }
+  @media print, screen and (max-width: 639px) {
+    .top_inner {
+      padding-bottom: 10px; } }
   .top_inner .subtitle {
     position: absolute;
     left: 40px;
@@ -433,11 +487,6 @@ nav a {
       @media print, screen and (max-width: 639px) {
         .top_inner .subtitle svg {
           width: 100%; } }
-    .top_inner .subtitle smg img {
-      margin: 0;
-      padding: 0;
-      width: 100%;
-      fill: #ff0000; }
     .top_inner .subtitle .defs {
       display: none; }
   .top_inner .top-img {
@@ -451,14 +500,57 @@ nav a {
 /*共通*/
 .top-contents {
   margin-top: 50px; }
+  .top-contents .readtxt {
+    width: 100%;
+    text-align: right;
+    padding-right: 20px;
+    margin-top: 15px;
+    letter-spacing: -0.09em; }
+    @media print, screen and (min-width: 640px) and (max-width: 1079px) {
+      .top-contents .readtxt {
+        padding-right: 0px; } }
+    @media print, screen and (max-width: 639px) {
+      .top-contents .readtxt {
+        padding-right: 0px;
+        text-align: center;
+        border-top: 1px solid #E9E9E9;
+        margin-top: 15px;
+        padding-top: 20px;
+        display: block; } }
+    .top-contents .readtxt span {
+      border-bottom: 1px solid #1BCDD9;
+      display: inline-block;
+      margin-right: 10px;
+      vertical-align: middle;
+      width: 50px; }
+      @media print, screen and (max-width: 639px) {
+        .top-contents .readtxt span {
+          display: none; } }
+    .top-contents .readtxt a {
+      text-decoration: none;
+      font-weight: bold;
+      color: #0EBECA;
+      font-size: 16px;
+      font-size: 16px;
+      font-size: 1.6rem;
+      line-height: 1.5; }
+      .top-contents .readtxt a:hover {
+        color: #39DAB6; }
+      @media print, screen and (max-width: 639px) {
+        .top-contents .readtxt a {
+          font-size: 13px;
+          font-size: 1.3rem;
+          line-height: 1.84615;
+          color: #5B5B5B; } }
   @media print, screen and (min-width: 640px) and (max-width: 1079px) {
     .top-contents {
       width: 94.8%;
       margin-right: auto;
-      margin-left: auto; } }
+      margin-left: auto;
+      margin-top: 40px; } }
   @media print, screen and (max-width: 639px) {
     .top-contents {
-      margin-top: 30px;
+      margin-top: 0px;
       width: 92%;
       margin-right: auto;
       margin-left: auto; } }
@@ -469,11 +561,34 @@ nav a {
     line-height: 1.42857;
     margin-bottom: 20px;
     color: #4A4A4A;
-    border-bottom: 3px solid #F8E71C;
     display: inline-block; }
-    @media print, screen and (max-width: 639px) {
+    @media print, screen and (min-width: 640px) and (max-width: 1079px) {
       .top-contents h3 {
         margin-bottom: 10px; } }
+    @media print, screen and (max-width: 639px) {
+      .top-contents h3 {
+        margin-bottom: 6px;
+        display: block;
+        color: #515151;
+        font-size: 12px;
+        font-size: 1.2rem;
+        line-height: 1.66667; } }
+    .top-contents h3 span.sp {
+      display: none; }
+      @media print, screen and (max-width: 639px) {
+        .top-contents h3 span.sp {
+          display: block;
+          font-size: 14px;
+          font-size: 1.4rem;
+          line-height: 1.71429;
+          color: #262626;
+          margin-bottom: 10px;
+          font-weight: normal; } }
+    .top-contents h3 span.pc {
+      display: block; }
+      @media print, screen and (max-width: 639px) {
+        .top-contents h3 span.pc {
+          display: none; } }
   .top-contents .main-chach {
     font-size: 16px;
     font-size: 16px;
@@ -481,46 +596,60 @@ nav a {
     line-height: 2;
     margin-bottom: 5px; }
   .top-contents p {
-    font-size: 14px;
-    font-size: 14px;
-    font-size: 1.4rem;
-    line-height: 2.35714;
+    font-size: 15px;
+    font-size: 15px;
+    font-size: 1.5rem;
+    line-height: 2.2;
     width: 95.46%; }
     @media print, screen and (min-width: 640px) and (max-width: 1079px) {
       .top-contents p {
         font-size: 16px;
         font-size: 1.6rem;
-        line-height: 2.1875;
+        line-height: 1.875;
         width: 100%; } }
     @media print, screen and (max-width: 639px) {
       .top-contents p {
-        font-size: 14px;
-        font-size: 1.4rem;
-        line-height: 1.85714;
+        font-size: 13px;
+        font-size: 1.3rem;
+        line-height: 1.84615;
         width: 100%; } }
 
 /*service*/
 .service-box {
   margin-top: 30px;
-  *zoom: 1;
   background: #f1f1f1;
   letter-spacing: -.40em;
-  padding-bottom: 0.74%; }
-  .service-box:after {
-    content: "";
-    display: table;
-    clear: both; }
+  padding-bottom: 1.04%; }
+  @media print, screen and (min-width: 640px) and (max-width: 1079px) {
+    .service-box {
+      padding-bottom: 1.04%;
+      letter-spacing: -.40em;
+      *zoom: 1; }
+      .service-box:after {
+        content: "";
+        display: table;
+        clear: both; } }
   @media print, screen and (max-width: 639px) {
     .service-box {
       margin-top: 20px;
       background: #f2f2f2; } }
   .service-box .service-name {
-    width: 24.08%;
-    display: inline-block;
-    vertical-align: top;
-    letter-spacing: normal;
-    margin-top: 0.74%;
-    margin-left: 0.74%; }
+    letter-spacing: normal; }
+    @media print, screen and (min-width: 1080px) {
+      .service-box .service-name {
+        width: 24.08%;
+        display: inline-block;
+        vertical-align: top;
+        letter-spacing: normal;
+        margin-top: 0.74%;
+        margin-left: 0.74%; } }
+    @media print, screen and (min-width: 640px) and (max-width: 1079px) {
+      .service-box .service-name {
+        width: 23.7%;
+        float: left;
+        letter-spacing: normal;
+        margin-top: 1.04%;
+        margin-left: 1.04%; } }
     @media print, screen and (max-width: 639px) {
       .service-box .service-name {
         width: 100%;
@@ -535,8 +664,9 @@ nav a {
     border-bottom: 1px solid #f1f1f1; }
     @media print, screen and (max-width: 639px) {
       .service-box .service-title {
-        padding: 5.3% 0;
-        background: #f2f2f2; } }
+        padding: 3% 0 3% 5%;
+        background: #f2f2f2;
+        text-align: left; } }
     .service-box .service-title em {
       font-size: 15px;
       font-size: 15px;
@@ -551,6 +681,12 @@ nav a {
           font-size: 13px;
           font-size: 1.3rem;
           line-height: 1.84615; } }
+      @media print, screen and (max-width: 639px) {
+        .service-box .service-title em {
+          font-size: 13px;
+          font-size: 1.3rem;
+          line-height: 1.84615;
+          padding-bottom: 0px; } }
       .service-box .service-title em:before, .service-box .service-title em:after {
         background: #00C793;
         bottom: 9px;
@@ -561,6 +697,9 @@ nav a {
         position: absolute;
         right: 0;
         width: 25px; }
+        @media print, screen and (max-width: 639px) {
+          .service-box .service-title em:before, .service-box .service-title em:after {
+            display: none; } }
     .service-box .service-title span {
       display: block;
       font-size: 9px;
@@ -568,6 +707,9 @@ nav a {
       font-size: 0.9rem;
       line-height: 2.66667;
       font-weight: normal; }
+      @media print, screen and (max-width: 639px) {
+        .service-box .service-title span {
+          display: none; } }
   .service-box .service-detail {
     background: #fff; }
   .service-box .service-detail {
@@ -585,6 +727,9 @@ nav a {
         padding: 5.3% 5.3% 6.6%; } }
     .service-box .service-detail ul {
       margin-top: -5px; }
+      @media print, screen and (max-width: 639px) {
+        .service-box .service-detail ul {
+          width: 100%; } }
     .service-box .service-detail li {
       list-style: inside;
       margin-top: 5px; }
@@ -593,7 +738,8 @@ nav a {
 .latest {
   background: #fff;
   overflow: hidden;
-  letter-spacing: -.40em; }
+  letter-spacing: -.40em;
+  margin-bottom: 30px; }
   @media print, screen and (min-width: 1080px) {
     .latest {
       margin-top: 26px;
@@ -627,9 +773,7 @@ nav a {
     letter-spacing: normal; } }
 @media print, screen and (max-width: 639px) {
   .topworks {
-    margin-top: 30px;
-    border-bottom: 1px solid #E9E9E9;
-    padding-bottom: 20px; } }
+    margin-top: 20px; } }
 .topworks a {
   display: block; }
 .topworks img {
@@ -698,7 +842,8 @@ nav a {
   figcaption {
     width: 100%;
     padding: 0 1.5%;
-    margin-top: 15px; } }
+    margin-top: 15px;
+    text-decoration: none; } }
 
 @media print, screen and (min-width: 1080px) {
   .topworks figcaption h4 {
@@ -711,7 +856,10 @@ nav a {
     color: #444; } }
 @media print, screen and (max-width: 639px) {
   .topworks figcaption h4 {
-    color: #444; } }
+    color: #444;
+    font-size: 12px;
+    font-size: 1.2rem;
+    line-height: 2; } }
 
 @media print, screen and (min-width: 1080px) {
   .topworks figcaption p {
@@ -719,9 +867,9 @@ nav a {
     -webkit-transform: translateY(30px);
     -ms-transform: translateY(30px);
     transform: translateY(30px);
-    font-size: 16px;
-    font-size: 1.6rem;
-    line-height: 1.5; } }
+    font-size: 12px;
+    font-size: 1.2rem;
+    line-height: 2; } }
 @media print, screen and (min-width: 640px) and (max-width: 1079px) {
   .topworks figcaption p {
     color: #5B5B5B;
